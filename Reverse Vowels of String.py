@@ -9,10 +9,24 @@ class Zoho:
         Returns:
             The string with vowels reversed.
         """
-        arr = []
-        if "A" in s or "E" in s or "I" in s or "O" in s or "U" in s or "a" in s or "e" in s or "i" in s or "o" in s or "u" in s:
-            arr.append(s)
-            return arr
+        vowels = "aeiouAEIOU"
+        
+        s = list(s)
+        
+        vowel_list = []
+        
+        for j in s:
+            if j in vowels:
+                vowel_list.append(j)
+        
+        vowel_list.reverse()
+
+        for i in range(len(s)):
+            if s[i] in vowels:
+                s[i] = vowel_list.pop(0)
+        
+        return ''.join(s)
+        
         
 
 # Test cases
