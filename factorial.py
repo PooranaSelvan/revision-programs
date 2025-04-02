@@ -6,4 +6,4 @@ def factorial(n):
      print(res)
      
      
-factorial(100)
+factorial(3)

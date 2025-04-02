@@ -11,9 +11,9 @@ class Zoho:
         """
         lst = []
         for i in s:
-             if i == "(":
+             if i == "(" or i == "[" or i == "{":
                   lst.append(i)
-             elif i == ")":
+             elif i == ")" or i == "]" or i == "}":
                   lst.pop()
           
         if len(lst) == 0:
